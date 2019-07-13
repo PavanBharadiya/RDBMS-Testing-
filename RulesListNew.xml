@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ruleList>
+    <rule>
+        <antecedent>
+            <conditon>
+                <clause>
+                    <operation>&gt;=</operation>
+                    <value>20001</value>
+                </clause>
+                <conjuction>none</conjuction>
+                <element>acc_balance</element>
+            </conditon>
+            <table>Account</table>
+            <type>BT</type>
+        </antecedent>
+        <consequent>
+            <action>insert into premium_account values(:1,:2,:3,:4,'50000',:6,:7,:8,:9);</action>
+        </consequent>
+    </rule>
+  <!--<rule>
+        <antecedent>
+            <conditon>
+                <clause>
+                    <operation>&lt;=</operation>
+                    <value>CURRENT_DATE-90</value>
+                </clause>
+                <conjuction>none</conjuction>
+                <element>date(PasswdLastUpdatedDate)</element>
+            </conditon>
+            <table>customer</table>
+            <type>BT</type>
+        </antecedent>
+        <consequent>
+            <action>update customer set Cust_passwd ='DEFAULT' where Cust_ID=:1</action>
+        </consequent>
+    </rule> -->
+ 
+</ruleList>
